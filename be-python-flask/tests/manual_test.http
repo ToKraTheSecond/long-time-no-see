@@ -1,0 +1,37 @@
+@URL = http://127.0.0.1:5000
+
+###
+GET {{URL}}/
+
+### Add one record
+POST {{URL}}/records
+Content-Type: application/json
+
+{
+  "person": "John Carmack",
+  "date_of_meeting": "2024-01-26",
+  "what_we_did": "Some activity"
+}
+
+### Get one record
+@RECORD_ID = 1
+GET {{URL}}/records/{{RECORD_ID}}
+
+### Get all records
+GET {{URL}}/records
+
+### Get records summary
+GET {{URL}}/records/summary
+
+### Update record
+PUT {{URL}}/records/1
+Content-Type: application/json
+
+{
+  "person": "Donald Knuth",
+  "date_of_meeting": "2024-01-26",
+  "what_we_did": "Some activity"
+}
+
+### Delete record
+DELETE {{URL}}/records/1
