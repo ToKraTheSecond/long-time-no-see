@@ -1,6 +1,9 @@
 ## How to run
 
+Assign value to `POSTGRES_PASSWORD` variable in `.env` file. Then:
+
 ```bash
+cd be-python-flask
 docker compose up --build
 ```
 
